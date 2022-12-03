@@ -129,8 +129,8 @@ func main() {
 			break
 		}
 		// Part 1
-		compartment1, comparment2 := compartmentalize(rucksacks)
-		commonItems := sharedItem(compartment1, comparment2)
+		compartment1, compartment2 := compartmentalize(rucksacks)
+		commonItems := sharedItem(compartment1, compartment2)
 		priorityScores1 = append(priorityScores1, prioritize(commonItems))
 
 	}
