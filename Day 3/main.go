@@ -46,14 +46,10 @@ func sharedItem(compartment1 []string, comparement2 []string) string {
 
 // Part 2
 func elfGroups(rucksack []string) []string {
-	//counter := 0
 	var (
 		groupLetter []string
-		//groupOfElves []string
 	)
-	//numberOfGroups := len(rucksack) / 3
 	for i, _ := range rucksack {
-		//count := 0
 		j := i + 1
 		if j%3 == 0 {
 			groupOfElves := rucksack[j-3 : j]
@@ -64,7 +60,6 @@ func elfGroups(rucksack []string) []string {
 			groupLetter = append(groupLetter, badge)
 		}
 	}
-	//groupOfElves = nil
 	return groupLetter
 }
 
@@ -137,7 +132,6 @@ func main() {
 	// Part 2
 	badges := elfGroups(inputs)
 	for _, badge := range badges {
-		fmt.Println(badge)
 		priorityScores2 = append(priorityScores2, prioritize(badge))
 	}
 	fmt.Println(totalScore(priorityScores1))
